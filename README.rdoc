@@ -2,7 +2,7 @@
 
 Gem to add contact to Agendor CRM
 
-https://api.agendor.com.br/
+https://api.agendor.com.br
 
 Usage
 
