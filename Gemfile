@@ -13,6 +13,7 @@ group :development do
   gem "simplecov", ">= 0"
   gem 'rspec'
   gem 'vcr'
+  gem 'fakeweb'
 end
 
 
