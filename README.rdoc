@@ -1,9 +1,16 @@
 = agendor-ruby
 
-Description goes here.
+Gem to add contact to Agendor CRM
+
+https://api.agendor.com.br/
+
+Usage
+
+  client = Api.new(email, pass)
+  client.add_person({:name=>"Whatever", :role=>"Singer", :description => "Nice guy", :emails_array=>["whateveremail@gmail.com"]})
 
 == Contributing to agendor-ruby
- 
+
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
 * Fork the project.
@@ -16,4 +23,3 @@ Description goes here.
 
 Copyright (c) 2014 Bruno Ghisi. See LICENSE.txt for
 further details.
-
