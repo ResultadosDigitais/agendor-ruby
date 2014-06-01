@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "agendor-ruby.gemspec",
     "lib/agendor-ruby.rb",
     "lib/api.rb",
     "spec/api_spec.rb",
