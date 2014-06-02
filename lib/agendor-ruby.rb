@@ -1,2 +1,2 @@
-require "api"
+require "agendor/api"
 require 'httparty'
