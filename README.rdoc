@@ -6,7 +6,7 @@ https://api.agendor.com.br
 
 Usage
 
-  client = Api.new(email, pass)
+  client = Agendor::Api.new(email, pass)
   client.add_person({:name=>"Whatever", :role=>"Singer", :description => "Nice guy", :emails_array=>["whateveremail@gmail.com"]})
 
 == Contributing to agendor-ruby
