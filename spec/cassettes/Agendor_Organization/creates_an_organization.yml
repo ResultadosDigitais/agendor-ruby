@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://brunogh%40gmail.com:qwe123@api.agendor.com.br/v1//organizations
+    body:
+      encoding: UTF-8
+      string: '{"nickname":"Whatever","description":"Whatever company","website":"www.whatever.com"}'
+    headers:
+      content-type:
+      - application/json
+      authorization:
+      - Basic YnJ1bm9naEBnbWFpbC5jb206cXdlMTIz
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      server:
+      - nginx/1.4.7
+      date:
+      - Tue, 30 Dec 2014 21:23:54 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '884'
+      connection:
+      - close
+      location:
+      - https://api.agendor.com.br/v1/organizations/1374940
+      access-control-allow-origin:
+      - '*'
+      access-control-max-age:
+      - '86400'
+      access-control-allow-methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      access-control-allow-headers:
+      - Authorization, Content-Type, If-None-Match
+      access-control-expose-headers:
+      - WWW-Authenticate, Server-Authorization
+      cache-control:
+      - max-age=2592000
+      expires:
+      - Thu, 29 Jan 2015 21:23:54 GMT
+    body:
+      encoding: UTF-8
+      string: '{"organizationId":1374940,"customer":{"legalName":null,"logo":null,"createTime":"2014-12-30T21:23:54.000Z","reference":{},"plan":{},"userOwner":null,"phones":[{"number":null,"type":"work"},{"number":null,"type":"mobile"},{"number":null,"type":"fax"}],"emails":[null],"social":{"facebook":null,"twitter":null,"skype":null,"linkedIn":null}},"user":{"userId":24327},"phones":[{"number":null,"type":"work"},{"number":null,"type":"mobile"},{"number":null,"type":"fax"}],"emails":[null],"social":{"facebook":null,"twitter":null,"skype":null,"linkedIn":null},"address":{"postalCode":null,"country":"Brasil","state":null,"city":null,"district":null,"streetName":null,"streetNumber":null,"additionalInfo":null},"userOwner":null,"nickname":"Whatever","legalName":null,"cnpj":null,"description":"Whatever
+        company","website":"www.whatever.com","createTime":"2014-12-30T21:23:54.000Z","ranking":0}'
+    http_version: '1.1'
+  recorded_at: Tue, 30 Dec 2014 18:23:04 GMT
+recorded_with: VCR 2.5.0
