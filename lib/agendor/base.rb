@@ -3,7 +3,6 @@ module Agendor
   class Base
 
     def initialize(username, password)
-      raise "You must initialize it through a subclass!" unless self.class != Agendor::Base
       @username = username
       @password = password
     end
