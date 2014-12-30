@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://brunogh%40gmail.com:qwe123@api.agendor.com.br/v1//people
+    body:
+      encoding: UTF-8
+      string: '{"name":"Whatever","role":"Singer","emails":["whateveremail@gmail.com"],"description":"Nice
+        guy"}'
+    headers:
+      content-type:
+      - application/json
+      authorization:
+      - Basic YnJ1bm9naEBnbWFpbC5jb206cXdlMTIz
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      server:
+      - nginx/1.4.7
+      date:
+      - Tue, 30 Dec 2014 21:24:12 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '706'
+      connection:
+      - close
+      location:
+      - https://api.agendor.com.br/v1/people/1010984
+      access-control-allow-origin:
+      - '*'
+      access-control-max-age:
+      - '86400'
+      access-control-allow-methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      access-control-allow-headers:
+      - Authorization, Content-Type, If-None-Match
+      access-control-expose-headers:
+      - WWW-Authenticate, Server-Authorization
+      cache-control:
+      - max-age=2592000
+      expires:
+      - Thu, 29 Jan 2015 21:24:12 GMT
+    body:
+      encoding: UTF-8
+      string: '{"personId":1010984,"customer":{"reference":{},"plan":{},"userOwner":null,"phones":[{"number":null,"type":"work"},{"number":null,"type":"mobile"},{"number":null,"type":"fax"}],"emails":["whateveremail@gmail.com"],"social":{"facebook":null,"twitter":null,"skype":null,"msn":null,"linkedIn":null}},"user":{"userId":24327,"name":"Bruno"},"organization":null,"phones":[{"number":null,"type":"work"},{"number":null,"type":"mobile"},{"number":null,"type":"fax"}],"emails":["whateveremail@gmail.com"],"social":{"facebook":null,"twitter":null,"skype":null,"msn":null,"linkedIn":null},"address":{},"userOwner":null,"name":"Whatever","role":"Singer","createTime":"2014-12-30T21:24:12.000Z","ranking":null,"cpf":null}'
+    http_version: '1.1'
+  recorded_at: Tue, 30 Dec 2014 18:23:22 GMT
+recorded_with: VCR 2.5.0

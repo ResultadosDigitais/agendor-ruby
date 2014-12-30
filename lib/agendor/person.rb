@@ -1,14 +1,14 @@
 module Agendor
 
-  class Person < Agendor::Api
+  class Person < Agendor::Base
     
     def process_hash(params)
-	  person = {
-	  	"name" => params[:name],
-	    "role" => params[:role],
-	    "emails" => params[:emails_array],
-	    "description" => params[:description]
-	  }
+	{
+	  "name" => params[:name],
+	  "role" => params[:role],
+	  "emails" => params[:emails_array],
+	  "description" => params[:description]
+	}
 	end
 
    	def resource_path
