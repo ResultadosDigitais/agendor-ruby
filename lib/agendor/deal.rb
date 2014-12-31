@@ -1,19 +1,29 @@
 module Agendor
 
-  class Deal < Agendor::Base
-    
-    def process_hash(params)
-	{
-	  "title" => params[:title],
-	  "organization" => params[:org_id],
-	  "value" => params[:value]
-	}
-	end
+	class Deal < Agendor::Base
+		
+		def hash_keys 
+		[
+			:organization, 
+			:person, 
+			:user, 
+			:dealStage, 
+			:dealStatus, 
+			:userOwner, 
+			:title, 
+			:description, 
+			:startTime, 
+			:endTime, 
+			:ranking, 
+			:value, 
+			:products, 
+		]
+		end
+		
+		def resource_path
+			"#{api_path}/deals"
+		end
 
-   	def resource_path
-  	  "#{api_path}/deals"
 	end
-
-  end
 
 end

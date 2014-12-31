@@ -1,5 +1,5 @@
 module Agendor
-  
+
   class Base
 
     def initialize(username, password)
@@ -16,7 +16,7 @@ module Agendor
     end
 
     def process_hash(params)
-      raise "Abstract method!"
+      params.select {|k, v| hash_keys.include?(k) }
     end
 
     private

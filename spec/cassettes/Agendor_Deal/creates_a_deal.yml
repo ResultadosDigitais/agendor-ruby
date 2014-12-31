@@ -5,7 +5,7 @@ http_interactions:
     uri: https://brunogh%40gmail.com:qwe123@api.agendor.com.br/v1//deals
     body:
       encoding: UTF-8
-      string: '{"title":"Whatever Deal","organization":1374940,"value":50000}'
+      string: '{"title":"Whatever Deal","value":50000}'
     headers:
       content-type:
       - application/json
@@ -19,15 +19,15 @@ http_interactions:
       server:
       - nginx/1.4.7
       date:
-      - Tue, 30 Dec 2014 21:29:24 GMT
+      - Wed, 31 Dec 2014 14:01:53 GMT
       content-type:
       - application/json; charset=utf-8
       content-length:
-      - '393'
+      - '384'
       connection:
       - close
       location:
-      - https://api.agendor.com.br/v1/deals/394245
+      - https://api.agendor.com.br/v1/deals/394306
       access-control-allow-origin:
       - '*'
       access-control-max-age:
@@ -41,11 +41,11 @@ http_interactions:
       cache-control:
       - max-age=2592000
       expires:
-      - Thu, 29 Jan 2015 21:29:24 GMT
+      - Fri, 30 Jan 2015 14:01:53 GMT
     body:
       encoding: UTF-8
-      string: '{"dealId":394245,"organization":{"organizationId":1374940,"name":"Whatever"},"person":{},"user":{"userId":24327,"name":"Bruno"},"dealStage":{"dealStageId":null,"name":null},"dealStatus":{"dealStatusId":1,"name":"Em
-        andamento"},"userOwner":null,"title":"Whatever Deal","description":null,"startTime":null,"endTime":null,"createTime":"2014-12-30T21:29:24.000Z","ranking":null,"value":"50000.00"}'
+      string: '{"dealId":394306,"organization":{"organizationId":null,"name":null},"person":{},"user":{"userId":24327,"name":"Bruno"},"dealStage":{"dealStageId":null,"name":null},"dealStatus":{"dealStatusId":1,"name":"Em
+        andamento"},"userOwner":null,"title":"Whatever Deal","description":null,"startTime":null,"endTime":null,"createTime":"2014-12-31T14:01:53.000Z","ranking":null,"value":"50000.00"}'
     http_version: '1.1'
-  recorded_at: Tue, 30 Dec 2014 18:28:34 GMT
+  recorded_at: Wed, 31 Dec 2014 14:01:38 GMT
 recorded_with: VCR 2.5.0
