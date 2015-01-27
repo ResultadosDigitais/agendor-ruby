@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Agendor::Organization", :vcr => { record: :all } do
+describe "Agendor::Organization", :vcr do
 
   it "creates an organization" do
     client = Agendor::Organization.new("brunogh@gmail.com", "qwe123")
