@@ -12,7 +12,7 @@ module Agendor
       post = HTTParty.post(resource_path, :body => body.to_json, :headers => headers, :basic_auth => auth)
       code = post.response.code
       raise "Response not HTTP OK: #{code}" if code != "201"
-      code
+      object_id(post.parsed_response)
     end
 
     def process_hash(params)
