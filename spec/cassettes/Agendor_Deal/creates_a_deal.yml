@@ -19,7 +19,7 @@ http_interactions:
       server:
       - nginx/1.4.7
       date:
-      - Wed, 31 Dec 2014 14:01:53 GMT
+      - Tue, 27 Jan 2015 14:34:33 GMT
       content-type:
       - application/json; charset=utf-8
       content-length:
@@ -27,7 +27,7 @@ http_interactions:
       connection:
       - close
       location:
-      - https://api.agendor.com.br/v1/deals/394306
+      - https://api.agendor.com.br/v1/deals/427718
       access-control-allow-origin:
       - '*'
       access-control-max-age:
@@ -41,11 +41,11 @@ http_interactions:
       cache-control:
       - max-age=2592000
       expires:
-      - Fri, 30 Jan 2015 14:01:53 GMT
+      - Thu, 26 Feb 2015 14:34:33 GMT
     body:
-      encoding: UTF-8
-      string: '{"dealId":394306,"organization":{"organizationId":null,"name":null},"person":{},"user":{"userId":24327,"name":"Bruno"},"dealStage":{"dealStageId":null,"name":null},"dealStatus":{"dealStatusId":1,"name":"Em
-        andamento"},"userOwner":null,"title":"Whatever Deal","description":null,"startTime":null,"endTime":null,"createTime":"2014-12-31T14:01:53.000Z","ranking":null,"value":"50000.00"}'
+      encoding: US-ASCII
+      string: '{"dealId":427718,"organization":{"organizationId":null,"name":null},"person":{},"user":{"userId":24327,"name":"Bruno"},"dealStage":{"dealStageId":null,"name":null},"dealStatus":{"dealStatusId":1,"name":"Em
+        andamento"},"userOwner":null,"title":"Whatever Deal","description":null,"startTime":null,"endTime":null,"createTime":"2015-01-27T14:34:33.000Z","ranking":null,"value":"50000.00"}'
     http_version: '1.1'
-  recorded_at: Wed, 31 Dec 2014 14:01:38 GMT
+  recorded_at: Tue, 27 Jan 2015 14:32:51 GMT
 recorded_with: VCR 2.5.0

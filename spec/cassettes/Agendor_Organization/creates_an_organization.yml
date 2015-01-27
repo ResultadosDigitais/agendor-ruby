@@ -5,7 +5,7 @@ http_interactions:
     uri: https://brunogh%40gmail.com:qwe123@api.agendor.com.br/v1//organizations
     body:
       encoding: UTF-8
-      string: '{"nickname":"Whatever X","description":"Whatever company","website":"www.whatever.com"}'
+      string: '{"nickname":"Whatever Company Inc.","description":"Whatever company","website":"www.whatever.com"}'
     headers:
       content-type:
       - application/json
@@ -19,15 +19,15 @@ http_interactions:
       server:
       - nginx/1.4.7
       date:
-      - Wed, 31 Dec 2014 14:09:35 GMT
+      - Tue, 27 Jan 2015 14:40:29 GMT
       content-type:
       - application/json; charset=utf-8
       content-length:
-      - '886'
+      - '897'
       connection:
       - close
       location:
-      - https://api.agendor.com.br/v1/organizations/1376123
+      - https://api.agendor.com.br/v1/organizations/1493396
       access-control-allow-origin:
       - '*'
       access-control-max-age:
@@ -41,11 +41,11 @@ http_interactions:
       cache-control:
       - max-age=2592000
       expires:
-      - Fri, 30 Jan 2015 14:09:35 GMT
+      - Thu, 26 Feb 2015 14:40:29 GMT
     body:
-      encoding: UTF-8
-      string: '{"organizationId":1376123,"customer":{"legalName":null,"logo":null,"createTime":"2014-12-31T14:09:35.000Z","reference":{},"plan":{},"userOwner":null,"phones":[{"number":null,"type":"work"},{"number":null,"type":"mobile"},{"number":null,"type":"fax"}],"emails":[null],"social":{"facebook":null,"twitter":null,"skype":null,"linkedIn":null}},"user":{"userId":24327},"phones":[{"number":null,"type":"work"},{"number":null,"type":"mobile"},{"number":null,"type":"fax"}],"emails":[null],"social":{"facebook":null,"twitter":null,"skype":null,"linkedIn":null},"address":{"postalCode":null,"country":"Brasil","state":null,"city":null,"district":null,"streetName":null,"streetNumber":null,"additionalInfo":null},"userOwner":null,"nickname":"Whatever
-        X","legalName":null,"cnpj":null,"description":"Whatever company","website":"www.whatever.com","createTime":"2014-12-31T14:09:35.000Z","ranking":0}'
+      encoding: US-ASCII
+      string: '{"organizationId":1493396,"customer":{"legalName":null,"logo":null,"createTime":"2015-01-27T14:40:29.000Z","reference":{},"plan":{},"userOwner":null,"phones":[{"number":null,"type":"work"},{"number":null,"type":"mobile"},{"number":null,"type":"fax"}],"emails":[null],"social":{"facebook":null,"twitter":null,"skype":null,"linkedIn":null}},"user":{"userId":24327},"phones":[{"number":null,"type":"work"},{"number":null,"type":"mobile"},{"number":null,"type":"fax"}],"emails":[null],"social":{"facebook":null,"twitter":null,"skype":null,"linkedIn":null},"address":{"postalCode":null,"country":"Brasil","state":null,"city":null,"district":null,"streetName":null,"streetNumber":null,"additionalInfo":null},"userOwner":null,"nickname":"Whatever
+        Company Inc.","legalName":null,"cnpj":null,"description":"Whatever company","website":"www.whatever.com","createTime":"2015-01-27T14:40:29.000Z","ranking":0}'
     http_version: '1.1'
-  recorded_at: Wed, 31 Dec 2014 14:09:20 GMT
+  recorded_at: Tue, 27 Jan 2015 14:38:48 GMT
 recorded_with: VCR 2.5.0

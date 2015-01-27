@@ -5,10 +5,10 @@
 
 Gem::Specification.new do |s|
   s.name = "agendor-ruby"
-  s.version = "0.0.1"
+  s.version = "1.0.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Bruno Ghisi"]
+  s.authors = ["Bruno Ghisi", "Nathan Thiesen"]
   s.date = "2014-06-01"
   s.description = "Agendor CRM ruby client"
   s.email = "brunogh@gmail.com"
@@ -26,9 +26,18 @@ Gem::Specification.new do |s|
     "VERSION",
     "agendor-ruby.gemspec",
     "lib/agendor-ruby.rb",
-    "lib/api.rb",
-    "spec/api_spec.rb",
-    "spec/cassettes/Api/creates_a_person.yml",
+    "lib/agendor/base.rb",
+    "lib/agendor/deal.rb",
+    "lib/agendor/organization.rb",
+    "lib/agendor/person.rb",
+    "spec/agendor/base_spec.rb",
+    "spec/agendor/deal_spec.rb",
+    "spec/agendor/organization_spec.rb",
+    "spec/agendor/person_spec.rb",
+    "spec/cassettes/Agendor_Api/creates_a_person.yml",
+    "spec/cassettes/Agendor_Api/creates_a_person.yml",
+    "spec/cassettes/Agendor_Api/creates_a_person.yml",
+    "spec/cassettes/Agendor_Api/creates_a_person.yml",
     "spec/spec_helper.rb"
   ]
   s.homepage = "http://github.com/brunogh/agendor-ruby"

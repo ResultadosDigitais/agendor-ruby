@@ -19,7 +19,7 @@ http_interactions:
       server:
       - nginx/1.4.7
       date:
-      - Wed, 31 Dec 2014 14:01:54 GMT
+      - Tue, 27 Jan 2015 14:34:34 GMT
       content-type:
       - application/json; charset=utf-8
       content-length:
@@ -27,7 +27,7 @@ http_interactions:
       connection:
       - close
       location:
-      - https://api.agendor.com.br/v1/people/1011108
+      - https://api.agendor.com.br/v1/people/1067631
       access-control-allow-origin:
       - '*'
       access-control-max-age:
@@ -41,10 +41,10 @@ http_interactions:
       cache-control:
       - max-age=2592000
       expires:
-      - Fri, 30 Jan 2015 14:01:54 GMT
+      - Thu, 26 Feb 2015 14:34:34 GMT
     body:
-      encoding: UTF-8
-      string: '{"personId":1011108,"customer":{"reference":{},"plan":{},"userOwner":null,"phones":[{"number":null,"type":"work"},{"number":null,"type":"mobile"},{"number":null,"type":"fax"}],"emails":[],"social":{}},"user":{"userId":24327,"name":"Bruno"},"organization":null,"phones":[{"number":null,"type":"work"},{"number":null,"type":"mobile"},{"number":null,"type":"fax"}],"emails":[],"social":{},"address":{},"userOwner":null,"name":"Whatever","role":"Singer","createTime":"2014-12-31T14:01:54.000Z","ranking":null,"cpf":null}'
+      encoding: US-ASCII
+      string: '{"personId":1067631,"customer":{"reference":{},"plan":{},"userOwner":null,"phones":[{"number":null,"type":"work"},{"number":null,"type":"mobile"},{"number":null,"type":"fax"}],"emails":[],"social":{}},"user":{"userId":24327,"name":"Bruno"},"organization":null,"phones":[{"number":null,"type":"work"},{"number":null,"type":"mobile"},{"number":null,"type":"fax"}],"emails":[],"social":{},"address":{},"userOwner":null,"name":"Whatever","role":"Singer","createTime":"2015-01-27T14:34:34.000Z","ranking":null,"cpf":null}'
     http_version: '1.1'
-  recorded_at: Wed, 31 Dec 2014 14:01:39 GMT
+  recorded_at: Tue, 27 Jan 2015 14:32:53 GMT
 recorded_with: VCR 2.5.0
