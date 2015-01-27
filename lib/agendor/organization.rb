@@ -20,7 +20,7 @@ module Agendor
      "#{api_path}/organizations"
    end
 
-  def object_id(hash)
+  def klass_object_id(hash)
     hash["organizationId"]
   end
 

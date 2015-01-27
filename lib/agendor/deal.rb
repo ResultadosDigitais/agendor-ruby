@@ -24,7 +24,7 @@ module Agendor
 			"#{api_path}/deals"
 		end
 
-		def object_id(hash)
+		def klass_object_id(hash)
 			hash["dealId"]
 		end
 

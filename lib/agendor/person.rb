@@ -23,7 +23,7 @@ module Agendor
      "#{api_path}/people"
    end
 
-  def object_id(hash)
+  def klass_object_id(hash)
     hash["personId"]
   end
 
