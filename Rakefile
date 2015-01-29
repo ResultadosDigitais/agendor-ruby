@@ -20,7 +20,7 @@ Jeweler::Tasks.new do |gem|
   gem.summary = %Q{Agendor CRM ruby client}
   gem.description = %Q{Agendor CRM ruby client}
   gem.email = "brunogh@gmail.com"
-  gem.authors = ["Bruno Ghisi"]
+  gem.authors = ["Bruno Ghisi", "Nathan Thiesen"]
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
