@@ -7,6 +7,7 @@ module Agendor
         :personId,
         :category,
         :organization,
+        :description,
         :phones,
         :emails,
         :social,
