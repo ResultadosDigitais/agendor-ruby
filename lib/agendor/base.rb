@@ -30,7 +30,7 @@ module Agendor
     end
 
     def api_path
-      "https://api.agendor.com.br/v1/"
+      "https://api.agendor.com.br/v1"
     end
 
   end

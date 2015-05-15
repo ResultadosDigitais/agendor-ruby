@@ -1,5 +1,9 @@
 require 'spec_helper'
 
-describe "Agendor::Base", :vcr do
+describe Agendor::Base do
+
+  describe "#resource_path" do
+
+  end
 
 end
