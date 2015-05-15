@@ -9,6 +9,8 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.3.6)
     builder (3.2.2)
+    codeclimate-test-reporter (0.4.7)
+      simplecov (>= 0.7.1, < 1.0.0)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     diff-lcs (1.2.4)
@@ -92,6 +94,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.0)
+  codeclimate-test-reporter
   fakeweb
   httparty
   jeweler (~> 2.0.1)
