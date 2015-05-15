@@ -16,5 +16,8 @@ group :development do
   gem 'fakeweb'
 end
 
+group :test do
+	gem "codeclimate-test-reporter"
+end
 
 gem 'httparty'

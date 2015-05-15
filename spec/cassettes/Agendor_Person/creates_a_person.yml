@@ -29,7 +29,7 @@ http_interactions:
       location:
       - https://api.agendor.com.br/v1/people/1067631
       access-control-allow-origin:
-      - '*'
+      - "*"
       access-control-max-age:
       - '86400'
       access-control-allow-methods:
@@ -47,4 +47,51 @@ http_interactions:
       string: '{"personId":1067631,"customer":{"reference":{},"plan":{},"userOwner":null,"phones":[{"number":null,"type":"work"},{"number":null,"type":"mobile"},{"number":null,"type":"fax"}],"emails":[],"social":{}},"user":{"userId":24327,"name":"Bruno"},"organization":null,"phones":[{"number":null,"type":"work"},{"number":null,"type":"mobile"},{"number":null,"type":"fax"}],"emails":[],"social":{},"address":{},"userOwner":null,"name":"Whatever","role":"Singer","createTime":"2015-01-27T14:34:34.000Z","ranking":null,"cpf":null}'
     http_version: '1.1'
   recorded_at: Tue, 27 Jan 2015 14:32:53 GMT
-recorded_with: VCR 2.5.0
+- request:
+    method: post
+    uri: https://brunogh%40gmail.com:qwe123@api.agendor.com.br/v1/people
+    body:
+      encoding: UTF-8
+      string: '{"name":"Whatever","role":"Singer","description":"Nice guy"}'
+    headers:
+      content-type:
+      - application/json
+      authorization:
+      - Basic YnJ1bm9naEBnbWFpbC5jb206cXdlMTIz
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      server:
+      - nginx/1.4.7
+      date:
+      - Thu, 14 May 2015 18:03:59 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '516'
+      connection:
+      - close
+      location:
+      - https://api.agendor.com.br/v1/people/1492437
+      access-control-allow-origin:
+      - "*"
+      access-control-max-age:
+      - '86400'
+      access-control-allow-methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      access-control-allow-headers:
+      - Authorization, Content-Type, If-None-Match
+      access-control-expose-headers:
+      - WWW-Authenticate, Server-Authorization
+      cache-control:
+      - max-age=2592000
+      expires:
+      - Sat, 13 Jun 2015 18:03:59 GMT
+    body:
+      encoding: UTF-8
+      string: '{"personId":1492437,"customer":{"reference":{},"plan":{},"userOwner":null,"phones":[{"number":null,"type":"work"},{"number":null,"type":"mobile"},{"number":null,"type":"fax"}],"emails":[],"social":{}},"user":{"userId":24327,"name":"Bruno"},"organization":null,"phones":[{"number":null,"type":"work"},{"number":null,"type":"mobile"},{"number":null,"type":"fax"}],"emails":[],"social":{},"address":{},"userOwner":null,"name":"Whatever","role":"Singer","createTime":"2015-05-14T18:03:58.000Z","ranking":null,"cpf":null}'
+    http_version: '1.1'
+  recorded_at: Sat, 16 May 2015 18:03:56 GMT
+recorded_with: VCR 2.9.2
