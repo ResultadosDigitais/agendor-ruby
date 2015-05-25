@@ -1,4 +1,7 @@
 # agendor-ruby
+[![Build
+Status](https://travis-ci.org/ResultadosDigitais/agendor-ruby.svg)](https://travis-ci.org/ResultadosDigitais/agendor-ruby)
+
 
 Gem to add contacts, deals and organizations to Agendor CRM
 
