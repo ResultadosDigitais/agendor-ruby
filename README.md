@@ -8,7 +8,9 @@ Gem to add contacts, deals and organizations to Agendor CRM
 
 ### Usage
 
-You can get the list of all allowed resources attributes at https://api.agendor.com.br 
+You can get the list of all allowed resources attributes at https://api.agendor.com.br
+
+Parameters `username` and `password` are optional. Token will be used when present (not nil or '').
 
 #### Person
 
@@ -49,7 +51,7 @@ person_hash = {
   role: "Role",
   cpf: "11122233300"
 }
-client = Agendor::Person.new(email, pass)
+client = Agendor::Person.new(token, username, password)
 client.create(person_hash)
 ```
 
@@ -66,7 +68,7 @@ organization_hash = {
    }
   ]
 }
-client = Agendor::Organization.new(email, pass)
+client = Agendor::Organization.new(token, username, password)
 client.create(organization_hash)
 ```
 #### Deal
@@ -77,7 +79,7 @@ deal_hash = {
   organization: 123456,
   value: "20000",
 }
-client = Agendor::Deal.new(email, pass)
+client = Agendor::Deal.new(token, username, password)
 client.create(deal_hash)
 ```
 
