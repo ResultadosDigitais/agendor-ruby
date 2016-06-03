@@ -2,7 +2,7 @@ module Agendor
 
   class Base
 
-    def initialize(username, password, token = '')
+    def initialize(token, username = '', password = '')
       @username = username
       @password = password
       @token = token

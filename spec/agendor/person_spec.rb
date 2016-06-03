@@ -2,10 +2,10 @@ require 'spec_helper'
 
 describe Agendor::Person, :vcr do
 
-	let(:client) { Agendor::Person.new("brunogh@gmail.com", "qwe123") }
+	let(:client) { Agendor::Person.new("8a4bc1df-d464-473d-bf76-3d3d9492de5a") }
 
   it "creates a person" do
-  	expect(client.create({:name=>"Whatever", :role=>"Singer", :description => "Nice guy", :emails_array=>["whateveremail@gmail.com"]})).to eq(1492437)
+  	expect(client.create({:name=>"Xunderson", :role=>"Singer", :description => "Nice guy", :emails_array=>["xunderson@example.org"]})).to eq(6781686)
   end
 
   it "check path" do

@@ -2,10 +2,10 @@ require 'spec_helper'
 
 describe Agendor::Organization, :vcr do
 
-	let(:client) { Agendor::Organization.new("brunogh@gmail.com", "qwe123") }
+	let(:client) { Agendor::Organization.new("8a4bc1df-d464-473d-bf76-3d3d9492de5a") }
 
   it "creates an organization" do
-  	expect(client.create({:nickname=>"Whatever@ Company Inc.", :description=>"Whatever company", :website => "www.whatever.com"})).to eq(2133232)
+  	expect(client.create({:nickname=>"Final Xunda", :description=>"A Xunda company", :website => "www.thelast.org"})).to eq(4893917)
   end
 
   it "check path" do

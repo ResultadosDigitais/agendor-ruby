@@ -2,44 +2,51 @@ require 'spec_helper'
 
 describe Agendor::Base, :vcr do
 
-  context "basic auth" do
-
-    let(:client) { Agendor::Deal.new("vikings@resultadosdigitais.com.br", "#qwe#123", "") }
-
-    it "creates a deal" do
-      expect(client.create({:title=>"Whatever Deal", :org_id=>1374940, :value => 50000})).to eq(1606637)
-    end
-
-    it "check path" do
-      expect(client.resource_path).to eq('https://api.agendor.com.br/v1/deals')
-    end
-  end
-
   context "token auth" do
 
-    context 'using only token' do
+    let(:client) { Agendor::Deal.new("8a4bc1df-d464-473d-bf76-3d3d9492de5a") }
 
-      let(:client) { Agendor::Organization.new("", "", "8a4bc1df-d464-473d-bf76-3d3d9492de5a") }
+    it "creates a deal" do
+      expect(client.create({:title=>"Whatever xunda Deal", :org_id=>1374944, :value => 50000})).to eq(1607199)
+    end
+
+  end
+
+  context "basic auth" do
+
+    context 'without token' do
+
+      let(:client) { Agendor::Organization.new("", "vikings@resultadosdigitais.com.br", "#qwe#123") }
 
       it "creates an organization" do
-      	expect(client.create({:nickname=>"Whatever@ Company Inc.", :description=>"Whatever company", :website => "www.whatever.com"})).to eq(4892685)
+      	expect(client.create({:nickname=>"Xunda Company Co.1", :description=>"Whatever xunda company comes...", :website => "www.whateverxunda.com"})).to eq(4894013)
       end
 
-      it "check path" do
-        expect(client.resource_path).to eq('https://api.agendor.com.br/v1/organizations')
+    end
+
+    context 'with token' do
+
+      let(:client) { Agendor::Person.new("8a4bc1df-d464-473d-bf76-3d3d9492de5a", "vikings@resultadosdigitais.com.br", "#qwe#123") }
+
+      it "creates a person" do
+      	expect(client.create({:name=>"Xunderson Jr da silva", :role=>"RDoer", :description => "No more Mr. Nice guy", :emails_array=>["whateveremailxunda@gmail.com"]})).to eq(6784208)
+      end
+
+    end
+
+    context "with nil token param" do
+      let(:client) { Agendor::Organization.new(nil, "vikings@resultadosdigitais.com.br", "#qwe#123") }
+
+      it "raises validation error" do
+      	expect(client.create({:nickname=>"Xunda Company xundaCO.", :description=>"Whatever company xunda comes 2...", :website => "www.whateverxundinha2.com"})).to eq(4894017)
       end
     end
 
-    context 'with user and password' do
+    context "without token param" do
+      let(:client) { Agendor::Organization.new("vikings@resultadosdigitais.com.br", "#qwe#123") }
 
-      let(:client) { Agendor::Person.new("vikings@resultadosdigitais.com.br", "#qwe#123", "8a4bc1df-d464-473d-bf76-3d3d9492de5a") }
-
-      it "creates a person" do
-      	expect(client.create({:name=>"Whatever", :role=>"Singer", :description => "Nice guy", :emails_array=>["whateveremail@gmail.com"]})).to eq(6780540)
-      end
-
-      it "check path" do
-        expect(client.resource_path).to eq('https://api.agendor.com.br/v1/people')
+      it "raises validation error" do
+      	expect { client.create({:nickname=>"Xunda Company 3 comes xunda makers", :description=>"Whatever xundasso company", :website => "www.whateverxundoers.com"}) }.to raise_error
       end
     end
   end
