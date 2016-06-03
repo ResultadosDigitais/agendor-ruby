@@ -24,7 +24,7 @@ module Agendor
 
     def basic_auth
       auth_str = [@username,@password].join(':')
-      "Basic #{Base64.encode64(auth_str)}"
+      "Basic #{Base64.strict_encode64(auth_str)}"
     end
 
     def token_auth
@@ -33,7 +33,7 @@ module Agendor
 
     def headers
       header = { 'Content-Type' => "application/json" }
-      header['Authorization'] = @token.blank? ? basic_auth.gsub("\n",'') : token_auth
+      header['Authorization'] = (@token.nil? || @token.empty?) ? basic_auth : token_auth
       header
     end
 

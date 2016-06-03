@@ -10,7 +10,7 @@ Gem to add contacts, deals and organizations to Agendor CRM
 
 You can get the list of all allowed resources attributes at https://api.agendor.com.br
 
-Parameters `username` and `password` are optional. Token will be used when present (not nil or '').
+Parameters `username` and `password` are optional. Token will be used when present (not nil nor '').
 
 #### Person
 
