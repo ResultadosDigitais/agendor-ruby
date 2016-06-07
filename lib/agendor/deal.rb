@@ -1,6 +1,6 @@
 module Agendor
 
-	class Deal < Agendor::Base
+	class Deal < Agendor::Entity
 
 		def hash_keys
 			[
@@ -29,5 +29,4 @@ module Agendor
 		end
 
 	end
-
 end

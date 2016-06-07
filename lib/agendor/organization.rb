@@ -1,6 +1,6 @@
 module Agendor
 
-  class Organization < Agendor::Base
+  class Organization < Agendor::Entity
 
     def hash_keys
       [
@@ -25,5 +25,4 @@ module Agendor
     end
 
   end
-
 end

@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.agendor.com.br/v1/people
+    body:
+      encoding: UTF-8
+      string: '{"name":"Xunderson Jr da silva","role":"RDoer","description":"No more
+        Mr. Nice guy"}'
+    headers:
+      content-type:
+      - application/json
+      authorization:
+      - Token 8a4bc1df-d464-473d-bf76-3d3d9492de5a
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      access-control-allow-headers:
+      - Authorization, Content-Type, If-None-Match, SESSION_ID
+      access-control-allow-methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
+      - WWW-Authenticate, Server-Authorization
+      access-control-max-age:
+      - '86400'
+      cache-control:
+      - max-age=2592000
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 07 Jun 2016 15:10:02 GMT
+      expires:
+      - Thu, 07 Jul 2016 15:10:02 GMT
+      location:
+      - https://api.agendor.com.br/v1/people/6874082
+      server:
+      - nginx/1.4.7
+      content-length:
+      - '568'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"personId":6874082,"customer":{"reference":{},"plan":{},"userOwner":null,"phones":[{"number":null,"type":"work"},{"number":null,"type":"mobile"},{"number":null,"type":"fax"}],"emails":[],"social":{}},"user":{"userId":149921,"name":"vikings"},"organization":null,"phones":[{"number":null,"type":"work"},{"number":null,"type":"mobile"},{"number":null,"type":"fax"}],"emails":[],"social":{},"address":{},"userOwner":null,"name":"Xunderson
+        Jr da silva","role":"RDoer","createTime":"2016-06-07T18:10:02.000Z","ranking":null,"cpf":null,"description":"No
+        more Mr. Nice guy"}'
+    http_version: '1.1'
+  recorded_at: Tue, 07 Jun 2016 15:10:02 GMT
+recorded_with: VCR 2.5.0

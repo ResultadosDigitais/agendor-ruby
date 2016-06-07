@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://vikings%40resultadosdigitais.com.br:%23qwe%23123@api.agendor.com.br/v1/organizations
+    body:
+      encoding: UTF-8
+      string: '{"nickname":"Xunda Company Co.5","description":"Whatever xunda company
+        comes...","website":"www.whateverxunda.com"}'
+    headers:
+      content-type:
+      - application/json
+      authorization:
+      - Basic dmlraW5nc0ByZXN1bHRhZG9zZGlnaXRhaXMuY29tLmJyOiNxd2UjMTIz
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      access-control-allow-headers:
+      - Authorization, Content-Type, If-None-Match, SESSION_ID
+      access-control-allow-methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
+      - WWW-Authenticate, Server-Authorization
+      access-control-max-age:
+      - '86400'
+      cache-control:
+      - max-age=2592000
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 07 Jun 2016 15:15:58 GMT
+      expires:
+      - Thu, 07 Jul 2016 15:15:58 GMT
+      location:
+      - https://api.agendor.com.br/v1/organizations/4913187
+      server:
+      - nginx/1.4.7
+      content-length:
+      - '915'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"organizationId":4913187,"customer":{"legalName":null,"logo":null,"createTime":"2016-06-07T18:15:58.000Z","reference":{},"plan":{},"userOwner":null,"phones":[{"number":null,"type":"work"},{"number":null,"type":"mobile"},{"number":null,"type":"fax"}],"emails":[null],"social":{"facebook":null,"twitter":null,"skype":null,"linkedIn":null}},"user":{"userId":149921},"phones":[{"number":null,"type":"work"},{"number":null,"type":"mobile"},{"number":null,"type":"fax"}],"emails":[null],"social":{"facebook":null,"twitter":null,"skype":null,"linkedIn":null},"address":{"postalCode":null,"country":"Brasil","state":null,"city":null,"district":null,"streetName":null,"streetNumber":null,"additionalInfo":null},"userOwner":null,"nickname":"Xunda
+        Company Co.5","legalName":null,"cnpj":null,"description":"Whatever xunda company
+        comes...","website":"www.whateverxunda.com","createTime":"2016-06-07T18:15:58.000Z","ranking":0}'
+    http_version: '1.1'
+  recorded_at: Tue, 07 Jun 2016 15:15:58 GMT
+recorded_with: VCR 2.5.0

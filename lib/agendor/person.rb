@@ -1,6 +1,6 @@
 module Agendor
 
-  class Person < Agendor::Base
+  class Person < Agendor::Entity
 
     def hash_keys
       [
@@ -29,5 +29,4 @@ module Agendor
     end
 
   end
-
 end

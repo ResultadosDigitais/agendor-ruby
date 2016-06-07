@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.agendor.com.br/v1/organizations
+    body:
+      encoding: UTF-8
+      string: '{"nickname":"Xunda Company 3 comes xunda makers","description":"Whatever
+        xundasso company","website":"www.whateverxundoers.com"}'
+    headers:
+      content-type:
+      - application/json
+      authorization:
+      - Token vikings@resultadosdigitais.com.br
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      access-control-allow-headers:
+      - Authorization, Content-Type, If-None-Match, SESSION_ID
+      access-control-allow-methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
+      - WWW-Authenticate, Server-Authorization
+      access-control-max-age:
+      - '86400'
+      cache-control:
+      - no-cache
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 07 Jun 2016 15:10:03 GMT
+      server:
+      - nginx/1.4.7
+      www-authenticate:
+      - Token error="Bad token"
+      content-length:
+      - '63'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"statusCode":401,"error":"Unauthorized","message":"Bad token"}'
+    http_version: '1.1'
+  recorded_at: Tue, 07 Jun 2016 15:10:03 GMT
+recorded_with: VCR 2.5.0
