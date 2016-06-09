@@ -8,6 +8,10 @@ describe Agendor::Deal, :vcr do
     expect(client.create({:title=>"Whatever Deal", :org_id=>1374940, :value => 50000})).to eq(1613013)
   end
 
+	it "gets a deal" do
+    expect(client.get('Whatever Deal')).to eq(1606328)
+  end
+
   it "check path" do
     expect(client.resource_path).to eq('https://api.agendor.com.br/v1/deals')
   end

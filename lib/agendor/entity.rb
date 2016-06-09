@@ -10,6 +10,14 @@ module Agendor
       klass_object_id(post.parsed_response)
     end
 
+    def get(query)
+      get = HTTParty.get("#{resource_path}?q=#{query}", :headers => headers)
+      code = get.response.code
+      raise "Response not HTTP OK: #{code} | #{get.parsed_response["message"]}" if code != "200"
+      entity_hash = get.parsed_response.first
+      klass_object_id(entity_hash) if entity_hash
+    end
+
     def process_hash(params)
       params.select {|k, v| hash_keys.include?(k) }
     end
