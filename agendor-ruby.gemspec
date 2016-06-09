@@ -6,7 +6,7 @@
 
 Gem::Specification.new do |s|
   s.name = "agendor-ruby"
-  s.version = "2.1.0"
+  s.version = "2.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
@@ -18,16 +18,23 @@ Gem::Specification.new do |s|
     "LICENSE.txt",
     "README.rdoc"
   ]
-  s.files = Dir[
-    '.document',
-    'Gemfile',
-    'Gemfile.lock',
-    'LICENSE*',
-    'README*',
-    'Rakefile',
-    'VERSION',
-    'agendor-ruby.gemspec',
-    '{bin,lib,man,test,spec}/**/*'] & `git ls-files -z`.split("\0")
+  s.files = [
+    ".document",
+    "Gemfile",
+    "Gemfile.lock",
+    "LICENSE.txt",
+    "README.rdoc",
+    "Rakefile",
+    "VERSION",
+    "agendor-ruby.gemspec",
+    "lib/agendor-ruby.rb",
+    "lib/agendor/base.rb",
+    "lib/agendor/entity.rb",
+    "lib/agendor/deal.rb",
+    "lib/agendor/organization.rb",
+    "lib/agendor/person.rb",
+    "lib/agendor/token.rb"
+  ]
   s.homepage = "http://github.com/brunogh/agendor-ruby"
   s.licenses = ["MIT"]
   s.rubygems_version = "2.2.2"
