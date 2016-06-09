@@ -5,7 +5,7 @@ describe Agendor::Deal, :vcr do
 	let(:client) { Agendor::Deal.new("8a4bc1df-d464-473d-bf76-3d3d9492de5a") }
 
   it "creates a deal" do
-    expect(client.create({:title=>"Whatever Deal", :org_id=>1374940, :value => 50000})).to eq(1607026)
+    expect(client.create({:title=>"Whatever Deal", :org_id=>1374940, :value => 50000})).to eq(1613013)
   end
 
   it "check path" do

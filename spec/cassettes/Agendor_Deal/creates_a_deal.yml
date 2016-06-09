@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.agendor.com.br/v1/deals
+    body:
+      encoding: UTF-8
+      string: '{"title":"Whatever Deal","value":50000}'
+    headers:
+      content-type:
+      - application/json
+      authorization:
+      - Token 8a4bc1df-d464-473d-bf76-3d3d9492de5a
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      access-control-allow-headers:
+      - Authorization, Content-Type, If-None-Match, SESSION_ID
+      access-control-allow-methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
+      - WWW-Authenticate, Server-Authorization
+      access-control-max-age:
+      - '86400'
+      cache-control:
+      - max-age=2592000
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 07 Jun 2016 15:10:03 GMT
+      expires:
+      - Thu, 07 Jul 2016 15:10:03 GMT
+      location:
+      - https://api.agendor.com.br/v1/deals/1613013
+      server:
+      - nginx/1.4.7
+      content-length:
+      - '438'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"dealId":1613013,"organization":{"organizationId":null,"name":null},"person":{},"user":{"userId":149921,"name":"vikings"},"dealStage":{"dealStageId":null,"name":null},"dealStatus":{"dealStatusId":1,"name":"Em
+        andamento"},"userOwner":null,"title":"Whatever Deal","description":null,"startTime":null,"endTime":null,"createTime":"2016-06-07T18:10:03.000Z","ranking":null,"value":"50000.00","allowedUsers":{"userId":149921,"name":"vikings"}}'
+    http_version: '1.1'
+  recorded_at: Tue, 07 Jun 2016 15:10:03 GMT
+recorded_with: VCR 2.5.0
