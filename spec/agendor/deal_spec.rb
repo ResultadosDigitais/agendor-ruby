@@ -9,11 +9,22 @@ describe Agendor::Deal, :vcr do
   end
 
 	it "gets a deal" do
-    expect(client.get('Whatever Deal')).to eq(1606328)
+    response = client.get('Whatever Deal')
+    deal_id = response.first['dealId']
+    expect(deal_id).to eq(1606328)
+  end
+
+  it "gets an inexistent deal" do
+    response = client.get('98rhv98hgi3gji3gkwdl')
+    expect(response.first).not_to be
   end
 
   it "updates a deal" do
     expect(client.update( 1606328, { title: 'Whatever Deal', description: 'Eita DEAL!' })).to eq(1606328)
+  end
+
+  it "updates an inexistent deal" do
+    expect{client.update( 2536528394, { name: 'whatever' })}.to raise_error
   end
 
   it "check path" do

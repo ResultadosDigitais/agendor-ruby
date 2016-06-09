@@ -1,0 +1,28 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://api.agendor.com.br/v1/organizations/2536528394
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      content-type:
+      - application/json
+      authorization:
+      - Token 8a4bc1df-d464-473d-bf76-3d3d9492de5a
+  response:
+    status:
+      code: 504
+      message: GATEWAY_TIMEOUT
+    headers:
+      content-length:
+      - '0'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: '1.1'
+  recorded_at: Thu, 09 Jun 2016 21:17:13 GMT
+recorded_with: VCR 2.9.3

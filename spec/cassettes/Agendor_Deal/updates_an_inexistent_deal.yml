@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://api.agendor.com.br/v1/deals/2536528394
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      content-type:
+      - application/json
+      authorization:
+      - Token 8a4bc1df-d464-473d-bf76-3d3d9492de5a
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      access-control-allow-headers:
+      - Authorization, Content-Type, If-None-Match, SESSION_ID
+      access-control-allow-methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
+      - WWW-Authenticate, Server-Authorization
+      access-control-max-age:
+      - '86400'
+      cache-control:
+      - no-cache
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 09 Jun 2016 21:16:13 GMT
+      server:
+      - nginx/1.4.7
+      content-length:
+      - '121'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"statusCode":400,"error":"Bad Request","message":"title is required","validation":{"source":"payload","keys":["title"]}}'
+    http_version: '1.1'
+  recorded_at: Thu, 09 Jun 2016 21:16:13 GMT
+recorded_with: VCR 2.9.3

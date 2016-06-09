@@ -14,8 +14,7 @@ module Agendor
       get = HTTParty.get("#{resource_path}?q=#{query}", :headers => headers)
       code = get.response.code
       raise "Response not HTTP OK: #{code} | #{get.parsed_response["message"]}" if code != "200"
-      entity_hash = get.parsed_response.first
-      klass_object_id(entity_hash) if entity_hash
+      get.parsed_response
     end
 
     def update(entity_id, params)
