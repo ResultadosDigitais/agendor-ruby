@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.agendor.com.br/v1/deals?q=Whatever%20Deal
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      content-type:
+      - application/json
+      authorization:
+      - Token 8a4bc1df-d464-473d-bf76-3d3d9492de5a
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-headers:
+      - Authorization, Content-Type, If-None-Match, SESSION_ID
+      access-control-allow-methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
+      - WWW-Authenticate, Server-Authorization
+      access-control-max-age:
+      - '86400'
+      cache-control:
+      - max-age=2592000
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 09 Jun 2016 19:40:24 GMT
+      expires:
+      - Sat, 09 Jul 2016 19:40:24 GMT
+      server:
+      - nginx/1.4.7
+      total-count:
+      - '7'
+      content-length:
+      - '2633'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '[{"dealId":1606328,"organization":{"organizationId":null,"name":null},"person":{},"user":null,"dealStage":{"dealStageId":null,"name":null},"dealStatus":{"dealStatusId":1,"name":"Em
+        andamento"},"userOwner":null,"title":"Whatever Deal","description":null,"startTime":null,"endTime":null,"createTime":"2016-06-03T21:06:41.000Z","ranking":0,"value":"50000.00","allowedUsers":null},{"dealId":1606330,"organization":{"organizationId":null,"name":null},"person":{},"user":null,"dealStage":{"dealStageId":null,"name":null},"dealStatus":{"dealStatusId":1,"name":"Em
+        andamento"},"userOwner":null,"title":"Whatever Deal","description":null,"startTime":null,"endTime":null,"createTime":"2016-06-03T21:06:44.000Z","ranking":0,"value":"50000.00","allowedUsers":null},{"dealId":1606564,"organization":{"organizationId":null,"name":null},"person":{},"user":null,"dealStage":{"dealStageId":null,"name":null},"dealStatus":{"dealStatusId":1,"name":"Em
+        andamento"},"userOwner":null,"title":"Whatever Deal","description":null,"startTime":null,"endTime":null,"createTime":"2016-06-03T21:47:26.000Z","ranking":0,"value":"50000.00","allowedUsers":null},{"dealId":1606637,"organization":{"organizationId":null,"name":null},"person":{},"user":null,"dealStage":{"dealStageId":null,"name":null},"dealStatus":{"dealStatusId":1,"name":"Em
+        andamento"},"userOwner":null,"title":"Whatever Deal","description":null,"startTime":null,"endTime":null,"createTime":"2016-06-03T22:01:36.000Z","ranking":0,"value":"50000.00","allowedUsers":null},{"dealId":1607024,"organization":{"organizationId":null,"name":null},"person":{},"user":null,"dealStage":{"dealStageId":null,"name":null},"dealStatus":{"dealStatusId":1,"name":"Em
+        andamento"},"userOwner":null,"title":"Whatever Deal","description":null,"startTime":null,"endTime":null,"createTime":"2016-06-03T23:00:11.000Z","ranking":0,"value":"50000.00","allowedUsers":null},{"dealId":1607026,"organization":{"organizationId":null,"name":null},"person":{},"user":null,"dealStage":{"dealStageId":null,"name":null},"dealStatus":{"dealStatusId":1,"name":"Em
+        andamento"},"userOwner":null,"title":"Whatever Deal","description":null,"startTime":null,"endTime":null,"createTime":"2016-06-03T23:00:24.000Z","ranking":0,"value":"50000.00","allowedUsers":null},{"dealId":1613013,"organization":{"organizationId":null,"name":null},"person":{},"user":null,"dealStage":{"dealStageId":null,"name":null},"dealStatus":{"dealStatusId":1,"name":"Em
+        andamento"},"userOwner":null,"title":"Whatever Deal","description":null,"startTime":null,"endTime":null,"createTime":"2016-06-07T18:10:03.000Z","ranking":0,"value":"50000.00","allowedUsers":null}]'
+    http_version: '1.1'
+  recorded_at: Thu, 09 Jun 2016 19:40:24 GMT
+recorded_with: VCR 2.9.3

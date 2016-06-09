@@ -12,6 +12,10 @@ describe Agendor::Organization, :vcr do
     expect(client.get('Xunda Comp')).to eq(4893917)
   end
 
+  it "updates an organization" do
+    expect(client.update( 4893917, { description: 'Eita Organization!' })).to eq(4893917)
+  end
+
   it "check path" do
     expect(client.resource_path).to eq('https://api.agendor.com.br/v1/organizations')
   end

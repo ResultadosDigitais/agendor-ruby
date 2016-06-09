@@ -12,6 +12,10 @@ describe Agendor::Deal, :vcr do
     expect(client.get('Whatever Deal')).to eq(1606328)
   end
 
+  it "updates a deal" do
+    expect(client.update( 1606328, { title: 'Whatever Deal', description: 'Eita DEAL!' })).to eq(1606328)
+  end
+
   it "check path" do
     expect(client.resource_path).to eq('https://api.agendor.com.br/v1/deals')
   end

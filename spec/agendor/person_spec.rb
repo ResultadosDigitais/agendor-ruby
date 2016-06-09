@@ -12,6 +12,10 @@ describe Agendor::Person, :vcr do
     expect(client.get('johnybegud@example.org')).to eq(6785354)
   end
 
+  it "updates a person" do
+    expect(client.update( 6785354, { name: 'johna' })).to eq(6785354)
+  end
+
   it "check path" do
     expect(client.resource_path).to eq('https://api.agendor.com.br/v1/people')
   end
