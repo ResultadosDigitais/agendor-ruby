@@ -8,6 +8,25 @@ describe Agendor::Organization, :vcr do
   	expect(client.create({:nickname=>"Final Xundax", :description=>"A Xunda company", :website => "www.thelast.org"})).to eq(4913195)
   end
 
+	it "gets an organization" do
+    response = client.get('Xunda Comp')
+    org_id = response.first['organizationId']
+    expect(org_id).to eq(4893917)
+  end
+
+  it "gets an inexistent organization" do
+    response = client.get('98rhv98hgi3gji3gkwdl')
+    expect(response.first).not_to be
+  end
+
+  it "updates an organization" do
+    expect(client.update( 4893917, { description: 'Eita Organization!' })).to eq(4893917)
+  end
+
+  it "updates an inexistent organization" do
+    expect{client.update( 2536528394, { name: 'whatever' })}.to raise_error
+  end
+
   it "check path" do
     expect(client.resource_path).to eq('https://api.agendor.com.br/v1/organizations')
   end

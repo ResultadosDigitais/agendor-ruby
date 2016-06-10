@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.agendor.com.br/v1/organizations?q=Xunda%20Comp
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      content-type:
+      - application/json
+      authorization:
+      - Token 8a4bc1df-d464-473d-bf76-3d3d9492de5a
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-headers:
+      - Authorization, Content-Type, If-None-Match, SESSION_ID
+      access-control-allow-methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
+      - WWW-Authenticate, Server-Authorization
+      access-control-max-age:
+      - '86400'
+      cache-control:
+      - max-age=2592000
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 09 Jun 2016 19:40:24 GMT
+      expires:
+      - Sat, 09 Jul 2016 19:40:24 GMT
+      server:
+      - nginx/1.4.7
+      total-count:
+      - '1'
+      content-length:
+      - '889'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '[{"organizationId":4893917,"customer":{"legalName":null,"logo":null,"createTime":"2016-06-03T23:27:10.000Z","reference":{},"plan":{},"userOwner":null,"phones":[{"number":null,"type":"work"},{"number":null,"type":"mobile"},{"number":null,"type":"fax"}],"emails":[null],"social":{"facebook":null,"twitter":null,"skype":null,"linkedIn":null}},"user":{"userId":149921},"phones":[{"number":null,"type":"work"},{"number":null,"type":"mobile"},{"number":null,"type":"fax"}],"emails":[null],"social":{"facebook":null,"twitter":null,"skype":null,"linkedIn":null},"address":{"postalCode":null,"country":"Brasil","state":null,"city":null,"district":null,"streetName":null,"streetNumber":null,"additionalInfo":null},"userOwner":null,"nickname":"Xunda
+        Comp","legalName":null,"cnpj":null,"description":"A Xunda company","website":"www.xundacomp.org","createTime":"2016-06-03T23:27:10.000Z","ranking":0}]'
+    http_version: '1.1'
+  recorded_at: Thu, 09 Jun 2016 19:40:24 GMT
+recorded_with: VCR 2.9.3

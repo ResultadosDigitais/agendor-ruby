@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://api.agendor.com.br/v1/people/6785354
+    body:
+      encoding: UTF-8
+      string: '{"name":"johna"}'
+    headers:
+      content-type:
+      - application/json
+      authorization:
+      - Token 8a4bc1df-d464-473d-bf76-3d3d9492de5a
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-headers:
+      - Authorization, Content-Type, If-None-Match, SESSION_ID
+      access-control-allow-methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
+      - WWW-Authenticate, Server-Authorization
+      access-control-max-age:
+      - '86400'
+      cache-control:
+      - max-age=2592000
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 09 Jun 2016 20:33:47 GMT
+      expires:
+      - Sat, 09 Jul 2016 20:33:47 GMT
+      server:
+      - nginx/1.4.7
+      content-length:
+      - '832'
+      connection:
+      - Close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJwZXJzb25JZCI6Njc4NTM1NCwiY3VzdG9tZXIiOnsicmVmZXJlbmNlIjp7
+        fSwicGxhbiI6e30sInVzZXJPd25lciI6bnVsbCwicGhvbmVzIjpbeyJudW1i
+        ZXIiOm51bGwsInR5cGUiOiJ3b3JrIn0seyJudW1iZXIiOm51bGwsInR5cGUi
+        OiJtb2JpbGUifSx7Im51bWJlciI6bnVsbCwidHlwZSI6ImZheCJ9XSwiZW1h
+        aWxzIjpbImpvaG55YmVndWRAZXhhbXBsZS5vcmciXSwic29jaWFsIjp7ImZh
+        Y2Vib29rIjpudWxsLCJ0d2l0dGVyIjpudWxsLCJza3lwZSI6bnVsbCwibXNu
+        IjpudWxsLCJsaW5rZWRJbiI6bnVsbH19LCJ1c2VyIjp7InVzZXJJZCI6MTQ5
+        OTIxLCJuYW1lIjoidmlraW5ncyJ9LCJvcmdhbml6YXRpb24iOm51bGwsInBo
+        b25lcyI6W3sibnVtYmVyIjpudWxsLCJ0eXBlIjoid29yayJ9LHsibnVtYmVy
+        IjpudWxsLCJ0eXBlIjoibW9iaWxlIn0seyJudW1iZXIiOm51bGwsInR5cGUi
+        OiJmYXgifV0sImVtYWlscyI6WyJqb2hueWJlZ3VkQGV4YW1wbGUub3JnIl0s
+        InNvY2lhbCI6eyJmYWNlYm9vayI6bnVsbCwidHdpdHRlciI6bnVsbCwic2t5
+        cGUiOm51bGwsIm1zbiI6bnVsbCwibGlua2VkSW4iOm51bGx9LCJhZGRyZXNz
+        Ijp7fSwidXNlck93bmVyIjpudWxsLCJuYW1lIjoiam9obmEiLCJyb2xlIjoi
+        am9obnliZWd1ZCIsImNyZWF0ZVRpbWUiOiIyMDE2LTA2LTA0VDAwOjQ0OjU1
+        LjAwMFoiLCJyYW5raW5nIjpudWxsLCJjcGYiOm51bGwsImRlc2NyaXB0aW9u
+        IjoiSGlzdMOzcmljbyBkbyBMZWFkIG5vIFJEIFN0YXRpb246IGh0dHA6Ly9y
+        ZHN0YXRpb24uY29tLmJyL2xlYWRzL3B1YmxpYy9lNjg3ZmYxNC02YTQ0LTQx
+        ZDUtOWZiNC04NDE5ODVlNzYzMjgifQ==
+    http_version: '1.1'
+  recorded_at: Thu, 09 Jun 2016 20:33:47 GMT
+recorded_with: VCR 2.9.3

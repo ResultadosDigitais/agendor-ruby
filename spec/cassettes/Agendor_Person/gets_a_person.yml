@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.agendor.com.br/v1/people?q=johnybegud@example.org
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      content-type:
+      - application/json
+      authorization:
+      - Token 8a4bc1df-d464-473d-bf76-3d3d9492de5a
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-headers:
+      - Authorization, Content-Type, If-None-Match, SESSION_ID
+      access-control-allow-methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
+      - WWW-Authenticate, Server-Authorization
+      access-control-max-age:
+      - '86400'
+      cache-control:
+      - max-age=2592000
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 09 Jun 2016 19:40:25 GMT
+      expires:
+      - Sat, 09 Jul 2016 19:40:25 GMT
+      server:
+      - nginx/1.4.7
+      total-count:
+      - '1'
+      content-length:
+      - '836'
+      connection:
+      - Close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sicGVyc29uSWQiOjY3ODUzNTQsImN1c3RvbWVyIjp7InJlZmVyZW5jZSI6
+        e30sInBsYW4iOnt9LCJ1c2VyT3duZXIiOm51bGwsInBob25lcyI6W3sibnVt
+        YmVyIjpudWxsLCJ0eXBlIjoid29yayJ9LHsibnVtYmVyIjpudWxsLCJ0eXBl
+        IjoibW9iaWxlIn0seyJudW1iZXIiOm51bGwsInR5cGUiOiJmYXgifV0sImVt
+        YWlscyI6WyJqb2hueWJlZ3VkQGV4YW1wbGUub3JnIl0sInNvY2lhbCI6eyJm
+        YWNlYm9vayI6bnVsbCwidHdpdHRlciI6bnVsbCwic2t5cGUiOm51bGwsIm1z
+        biI6bnVsbCwibGlua2VkSW4iOm51bGx9fSwidXNlciI6eyJ1c2VySWQiOjE0
+        OTkyMSwibmFtZSI6InZpa2luZ3MifSwib3JnYW5pemF0aW9uIjpudWxsLCJw
+        aG9uZXMiOlt7Im51bWJlciI6bnVsbCwidHlwZSI6IndvcmsifSx7Im51bWJl
+        ciI6bnVsbCwidHlwZSI6Im1vYmlsZSJ9LHsibnVtYmVyIjpudWxsLCJ0eXBl
+        IjoiZmF4In1dLCJlbWFpbHMiOlsiam9obnliZWd1ZEBleGFtcGxlLm9yZyJd
+        LCJzb2NpYWwiOnsiZmFjZWJvb2siOm51bGwsInR3aXR0ZXIiOm51bGwsInNr
+        eXBlIjpudWxsLCJtc24iOm51bGwsImxpbmtlZEluIjpudWxsfSwiYWRkcmVz
+        cyI6e30sInVzZXJPd25lciI6bnVsbCwibmFtZSI6IkpvaG55YmVndWQiLCJy
+        b2xlIjoiam9obnliZWd1ZCIsImNyZWF0ZVRpbWUiOiIyMDE2LTA2LTA0VDAw
+        OjQ0OjU1LjAwMFoiLCJyYW5raW5nIjowLCJjcGYiOm51bGwsImRlc2NyaXB0
+        aW9uIjoiSGlzdMOzcmljbyBkbyBMZWFkIG5vIFJEIFN0YXRpb246IGh0dHA6
+        Ly9yZHN0YXRpb24uY29tLmJyL2xlYWRzL3B1YmxpYy9lNjg3ZmYxNC02YTQ0
+        LTQxZDUtOWZiNC04NDE5ODVlNzYzMjgifV0=
+    http_version: '1.1'
+  recorded_at: Thu, 09 Jun 2016 19:40:25 GMT
+recorded_with: VCR 2.9.3
