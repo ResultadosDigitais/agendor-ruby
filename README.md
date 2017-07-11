@@ -49,7 +49,8 @@ person_hash = {
     },
   name: "Abc",
   role: "Role",
-  cpf: "11122233300"
+  cpf: "11122233300",
+  phone: "48 9999-9999"
 }
 client = Agendor::Person.new(token, username, password)
 client.create(person_hash)
