@@ -16,7 +16,8 @@ module Agendor
         :name,
         :role,
         :ranking,
-        :cpf
+        :cpf,
+        :phone
       ]
     end
 
