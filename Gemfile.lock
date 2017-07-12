@@ -109,5 +109,8 @@ DEPENDENCIES
   simplecov
   vcr
 
+RUBY VERSION
+   ruby 2.2.2p95
+
 BUNDLED WITH
    1.14.6
