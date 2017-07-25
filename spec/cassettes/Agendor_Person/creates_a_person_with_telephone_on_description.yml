@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.agendor.com.br/v1/people
+    body:
+      encoding: UTF-8
+      string: '{"name":"Xunderson","role":"Singer","description":"Nice guy","phone":"48
+        9999-9999"}'
+    headers:
+      content-type:
+      - application/json
+      authorization:
+      - Token f437bd57-a4e6-4dc1-a9b1-5278008e6e0e
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      access-control-allow-headers:
+      - Authorization, Content-Type, If-None-Match, SESSION_ID
+      access-control-allow-methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
+      - WWW-Authenticate, Server-Authorization
+      access-control-max-age:
+      - '86400'
+      cache-control:
+      - no-cache
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 11 Jul 2017 19:10:27 GMT
+      location:
+      - https://api.agendor.com.br/v1/people/14410037
+      server:
+      - nginx/1.4.7
+      content-length:
+      - '568'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"personId":14410037,"customer":{"reference":{},"plan":{},"userOwner":null,"phones":[{"number":null,"type":"work"},{"number":null,"type":"mobile"},{"number":null,"type":"fax"}],"emails":[],"social":{}},"user":{"userId":283694,"name":"Bruno"},"organization":null,"phones":[{"number":null,"type":"work"},{"number":null,"type":"mobile"},{"number":null,"type":"fax"}],"emails":[],"social":{},"address":{},"userOwner":null,"name":"Xunderson","role":"Singer","createTime":"2017-07-11T19:10:27.000Z","ranking":null,"cpf":null,"description":"Nice
+        guy\nTelefone: 48 9999-9999"}'
+    http_version: '1.1'
+  recorded_at: Tue, 11 Jul 2017 19:10:27 GMT
+recorded_with: VCR 3.0.3
