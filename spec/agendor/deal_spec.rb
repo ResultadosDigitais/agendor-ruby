@@ -8,6 +8,10 @@ describe Agendor::Deal, :vcr do
     expect(client.create({:title=>"Whatever Deal", :org_id=>1374940, :value => 50000})).to eq(1613013)
   end
 
+	it "creates a deal with specific stage order" do
+    expect(client.create({:title=>"Whatever Deal", :org_id=>1374940, :value => 50000, :dealStageOrder => 1})).to eq(1613013)
+  end
+
 	it "gets a deal" do
     response = client.get('Whatever Deal')
     deal_id = response.first['dealId']

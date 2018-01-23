@@ -9,6 +9,7 @@ module Agendor
 				:user,
 				:dealStage,
 				:dealStatus,
+				:dealStageOrder,
 				:userOwner,
 				:title,
 				:description,
