@@ -92,7 +92,7 @@ GEM
     thread_safe (0.3.6-java)
     tzinfo (1.2.4)
       thread_safe (~> 0.1)
-    vcr (4.0.0)
+    vcr (3.0.3)
 
 PLATFORMS
   java
@@ -108,7 +108,7 @@ DEPENDENCIES
   rspec
   shoulda
   simplecov
-  vcr
+  vcr (~> 3.0.3)
 
 RUBY VERSION
    ruby 2.2.2p95
