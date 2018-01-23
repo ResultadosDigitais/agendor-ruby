@@ -2,14 +2,14 @@ require 'spec_helper'
 
 describe Agendor::Deal, :vcr do
 
-	let(:client) { Agendor::Deal.new("8a4bc1df-d464-473d-bf76-3d3d9492de5a") }
+	let(:client) { Agendor::Deal.new("de69397c-3aff-497a-98f3-47bb2f455d14") }
 
   it "creates a deal" do
-    expect(client.create({:title=>"Whatever Deal", :org_id=>1374940, :value => 50000})).to eq(1613013)
+    expect(client.create({:title=>"Whatever Deal", :org_id=>12821776, :value => 50000})).to eq(1613013)
   end
 
 	it "creates a deal with specific stage order" do
-    expect(client.create({:title=>"Whatever Deal", :org_id=>1374940, :value => 50000, :dealStageOrder => 1})).to eq(1613013)
+    expect(client.create({:title=>"Another Whatever Deal", :org_id=>12821776, :value => 50000, :dealStageOrder => 1})).to eq(4061332)
   end
 
 	it "gets a deal" do

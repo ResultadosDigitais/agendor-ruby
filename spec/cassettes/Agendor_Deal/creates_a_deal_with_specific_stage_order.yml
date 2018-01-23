@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.agendor.com.br/v1/deals
+    body:
+      encoding: UTF-8
+      string: '{"title":"Another Whatever Deal","value":50000,"dealStageOrder":1}'
+    headers:
+      content-type:
+      - application/json
+      authorization:
+      - Token de69397c-3aff-497a-98f3-47bb2f455d14
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      access-control-allow-headers:
+      - Authorization, Content-Type, If-None-Match, SESSION_ID, VERSION
+      access-control-allow-methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
+      - WWW-Authenticate, Server-Authorization
+      access-control-max-age:
+      - '86400'
+      cache-control:
+      - no-cache
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 23 Jan 2018 15:53:51 GMT
+      location:
+      - https://api.agendor.com.br/v1/deals/4061332
+      server:
+      - nginx/1.13.7
+      content-length:
+      - '527'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"dealId":4061332,"organization":{"organizationId":null,"name":null},"person":{},"user":{"userId":238645,"name":"Ana
+        Carolina Alves Rodrigues"},"dealStage":{"dealStageId":844041,"name":"Contato","order":1},"dealStatus":{"dealStatusId":1,"name":"Em
+        andamento"},"userOwner":null,"title":"Another Whatever Deal","description":null,"startTime":"2018-01-23T00:00:00.000Z","endTime":null,"createTime":"2018-01-23T15:53:51.000Z","ranking":null,"value":"50000.00","allowedUsers":{"userId":238645,"name":"Ana
+        Carolina Alves Rodrigues"}}'
+    http_version: '1.1'
+  recorded_at: Tue, 23 Jan 2018 15:53:51 GMT
+recorded_with: VCR 3.0.3
