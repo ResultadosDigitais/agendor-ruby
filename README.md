@@ -79,6 +79,7 @@ deal_hash = {
   title: "Deal Title",
   organization: 123456,
   value: "20000",
+  dealStageOrder: 1
 }
 client = Agendor::Deal.new(token, username, password)
 client.create(deal_hash)
