@@ -11,13 +11,14 @@ module Agendor
     end
 
     def get(query)
-      HTTParty.get("#{resource_path}?q=#{query}", headers: headers)
+      binding.pry
+      response = HTTParty.get("#{resource_path}?q=#{query}", headers: headers)
       raise EntityProcessingError, response unless response =~ SUCCESS_RESPONSE_CODE
     end
 
     def update(entity_id, params)
       body = process_hash(params)
-      HTTParty.put("#{resource_path}/#{entity_id}", body: body.to_json, headers: headers)
+      response = HTTParty.put("#{resource_path}/#{entity_id}", body: body.to_json, headers: headers)
       raise EntityProcessingError, response unless response =~ SUCCESS_RESPONSE_CODE
     end
 
