@@ -7,22 +7,28 @@ module Agendor
     def create(params)
       body = process_hash(params)
       response = HTTParty.post(resource_path, body: body.to_json, headers: headers)
-      raise EntityProcessingError.new(response) unless response =~ SUCCESS_RESPONSE_CODE
+      raise EntityProcessingError.new(response) unless success_response?(response.code)
     end
 
     def get(query)
       response = HTTParty.get("#{resource_path}?q=#{query}", headers: headers)
-      raise EntityProcessingError.new(response) unless response =~ SUCCESS_RESPONSE_CODE
+      raise EntityProcessingError.new(response) unless success_response?(response.code)
     end
 
     def update(entity_id, params)
       body = process_hash(params)
       response = HTTParty.put("#{resource_path}/#{entity_id}", body: body.to_json, headers: headers)
-      raise EntityProcessingError.new(response) unless response =~ SUCCESS_RESPONSE_CODE
+      raise EntityProcessingError.new(response) unless success_response?(response.code)
     end
 
     def process_hash(params)
       params.select {|k, v| hash_keys.include?(k) }
+    end
+
+    private
+
+    def success_response?(code)
+      code.between?(200, 299)
     end
 
     # This response should be raised when an error occurs
