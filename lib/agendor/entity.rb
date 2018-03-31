@@ -1,24 +1,24 @@
 module Agendor
 
   class Entity < Agendor::Base
-
-    SUCCESS_RESPONSE_CODE = /2\d\d/
-
     def create(params)
       body = process_hash(params)
       response = HTTParty.post(resource_path, body: body.to_json, headers: headers)
       raise EntityProcessingError.new(response) unless success_response?(response.code)
+      klass_object_id(response.parsed_response)
     end
 
     def get(query)
       response = HTTParty.get("#{resource_path}?q=#{query}", headers: headers)
       raise EntityProcessingError.new(response) unless success_response?(response.code)
+      response.parsed_response
     end
 
     def update(entity_id, params)
       body = process_hash(params)
       response = HTTParty.put("#{resource_path}/#{entity_id}", body: body.to_json, headers: headers)
       raise EntityProcessingError.new(response) unless success_response?(response.code)
+      klass_object_id(response.parsed_response)
     end
 
     def process_hash(params)
