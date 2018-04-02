@@ -34,21 +34,5 @@ module Agendor
     def success_response?(code)
       code.between?(200, 299)
     end
-
-    class EntityProcessingError < StandardError
-      attr_reader :response
-
-      def initialize(message = 'Error processing Agendor entity', response)
-        @response = response
-      end
-    end
-
-    class UnauthorizedError < StandardError
-      attr_reader :response
-
-      def initialize(message = 'Unauthorized request', response)
-        @response = response
-      end
-    end
   end
 end

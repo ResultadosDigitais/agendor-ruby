@@ -28,6 +28,21 @@ module Agendor
     def api_path
       "https://api.agendor.com.br/v1"
     end
-
   end
+
+  class EntityProcessingError < StandardError
+      attr_reader :response
+
+      def initialize(message = 'Error processing Agendor entity', response)
+        @response = response
+      end
+    end
+
+    class UnauthorizedError < StandardError
+      attr_reader :response
+
+      def initialize(message = 'Unauthorized request', response)
+        @response = response
+      end
+    end
 end
