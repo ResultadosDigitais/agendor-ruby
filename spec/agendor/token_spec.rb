@@ -14,8 +14,9 @@ describe Agendor::Token, :vcr do
 
 		let(:client_invalid) { Agendor::Token.new("xunda") }
 
-		it "returns error" do
-			expect{ client_invalid.get_token }.to raise_error
+		it "returns nil" do
+			response = client_invalid.get_token
+			expect(response).to be_nil
 		end
 	end
 

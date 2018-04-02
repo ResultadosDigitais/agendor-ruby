@@ -12,6 +12,7 @@ module Agendor
 
     def get(query)
       response = HTTParty.get("#{resource_path}?q=#{query}", headers: headers)
+      code = response.code
       raise UnauthorizedError.new(response) if code == 401
       raise EntityProcessingError.new(response) unless success_response?(code)
       response.parsed_response
@@ -20,6 +21,7 @@ module Agendor
     def update(entity_id, params)
       body = process_hash(params)
       response = HTTParty.put("#{resource_path}/#{entity_id}", body: body.to_json, headers: headers)
+      code = response.code
       raise UnauthorizedError.new(response) if code == 401
       raise EntityProcessingError.new(response) unless success_response?(code)
       klass_object_id(response.parsed_response)
