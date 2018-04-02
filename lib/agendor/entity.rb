@@ -4,20 +4,24 @@ module Agendor
     def create(params)
       body = process_hash(params)
       response = HTTParty.post(resource_path, body: body.to_json, headers: headers)
-      raise EntityProcessingError.new(response) unless success_response?(response.code)
+      code = response.code
+      raise UnauthorizedError.new(response) if code == 401
+      raise EntityProcessingError.new(response) unless success_response?(code)
       klass_object_id(response.parsed_response)
     end
 
     def get(query)
       response = HTTParty.get("#{resource_path}?q=#{query}", headers: headers)
-      raise EntityProcessingError.new(response) unless success_response?(response.code)
+      raise UnauthorizedError.new(response) if code == 401
+      raise EntityProcessingError.new(response) unless success_response?(code)
       response.parsed_response
     end
 
     def update(entity_id, params)
       body = process_hash(params)
       response = HTTParty.put("#{resource_path}/#{entity_id}", body: body.to_json, headers: headers)
-      raise EntityProcessingError.new(response) unless success_response?(response.code)
+      raise UnauthorizedError.new(response) if code == 401
+      raise EntityProcessingError.new(response) unless success_response?(code)
       klass_object_id(response.parsed_response)
     end
 
@@ -31,11 +35,18 @@ module Agendor
       code.between?(200, 299)
     end
 
-    # This response should be raised when an error occurs
     class EntityProcessingError < StandardError
       attr_reader :response
 
-      def initialize(_message = 'Error processing Agendor entity', response)
+      def initialize(message = 'Error processing Agendor entity', response)
+        @response = response
+      end
+    end
+
+    class UnauthorizedError < StandardError
+      attr_reader :response
+
+      def initialize(message = 'Unauthorized request', response)
         @response = response
       end
     end
