@@ -6,7 +6,7 @@ module Agendor
       response = HTTParty.post(resource_path, body: body.to_json, headers: headers)
       code = response.code
       raise UnauthorizedError.new(response) if code == 401
-      raise EntityProcessingError.new(response) unless success_response?(code)
+      raise ProcessingError.new(response) unless success_response?(code)
       klass_object_id(response.parsed_response)
     end
 
@@ -14,7 +14,7 @@ module Agendor
       response = HTTParty.get("#{resource_path}?q=#{query}", headers: headers)
       code = response.code
       raise UnauthorizedError.new(response) if code == 401
-      raise EntityProcessingError.new(response) unless success_response?(code)
+      raise ProcessingError.new(response) unless success_response?(code)
       response.parsed_response
     end
 
@@ -23,7 +23,7 @@ module Agendor
       response = HTTParty.put("#{resource_path}/#{entity_id}", body: body.to_json, headers: headers)
       code = response.code
       raise UnauthorizedError.new(response) if code == 401
-      raise EntityProcessingError.new(response) unless success_response?(code)
+      raise ProcessingError.new(response) unless success_response?(code)
       klass_object_id(response.parsed_response)
     end
 
@@ -35,6 +35,14 @@ module Agendor
 
     def success_response?(code)
       code.between?(200, 299)
+    end
+
+    class ProcessingError < StandardError
+      attr_reader :response
+
+      def initialize(message = 'Error processing Agendor entity', response)
+        @response = response
+      end
     end
   end
 end
