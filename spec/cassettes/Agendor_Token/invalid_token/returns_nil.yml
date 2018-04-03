@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.agendor.com.br/v1/auth/token
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      content-type:
+      - application/json
+      authorization:
+      - Token xunda
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      access-control-allow-headers:
+      - Authorization, Content-Type, If-None-Match, SESSION_ID, VERSION
+      access-control-allow-methods:
+      - GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS
+      access-control-allow-origin:
+      - "*"
+      access-control-expose-headers:
+      - WWW-Authenticate, Server-Authorization
+      access-control-max-age:
+      - '86400'
+      cache-control:
+      - no-cache
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 02 Apr 2018 15:22:51 GMT
+      server:
+      - nginx/1.13.8
+      www-authenticate:
+      - Token error="Bad token"
+      content-length:
+      - '98'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"statusCode":401,"error":"Unauthorized","message":"Bad token","attributes":{"error":"Bad
+        token"}}'
+    http_version: '1.1'
+  recorded_at: Mon, 02 Apr 2018 15:22:51 GMT
+recorded_with: VCR 3.0.3
