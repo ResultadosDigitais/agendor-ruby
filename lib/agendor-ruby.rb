@@ -4,5 +4,6 @@ require "agendor/person"
 require "agendor/organization"
 require "agendor/deal"
 require "agendor/token"
+require "agendor/version"
 
 require 'httparty'
