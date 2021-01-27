@@ -11,20 +11,6 @@ rescue Bundler::BundlerError => e
 end
 require 'rake'
 
-require 'jeweler'
-Jeweler::Tasks.new do |gem|
-  # gem is a Gem::Specification... see http://guides.rubygems.org/specification-reference/ for more options
-  gem.name = "agendor-ruby"
-  gem.homepage = "http://github.com/brunogh/agendor-ruby"
-  gem.license = "MIT"
-  gem.summary = %Q{Agendor CRM ruby client}
-  gem.description = %Q{Agendor CRM ruby client}
-  gem.email = "brunogh@gmail.com"
-  gem.authors = ["Bruno Ghisi", "Nathan Thiesen"]
-  # dependencies defined in Gemfile
-end
-Jeweler::RubygemsDotOrgTasks.new
-
 require 'rspec/core'
 require 'rspec/core/rake_task'
 RSpec::Core::RakeTask.new(:spec) do |spec|

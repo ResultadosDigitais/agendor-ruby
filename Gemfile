@@ -1,25 +1,9 @@
 source "http://rubygems.org"
 
-ruby '2.2.2'
-# Add dependencies required to use your gem here.
-# Example:
-#   gem "activesupport", ">= 2.3.5"
+ruby '2.6.6'
 
-# Add dependencies to develop your gem here.
-# Include everything needed to run rake, tests, features, etc.
-group :development do
-  gem "shoulda", ">= 0"
-  gem "rdoc", "~> 3.12"
-  gem "bundler", "~> 1.0"
-  gem "jeweler", "~> 2.0.1"
-  gem "simplecov", ">= 0"
-  gem 'rspec'
-  gem 'vcr', "~> 3.0.3"
-  gem 'fakeweb'
-end
+gemspec
 
 group :test do
-	gem "codeclimate-test-reporter"
+  gem "codeclimate-test-reporter"
 end
-
-gem 'httparty'
