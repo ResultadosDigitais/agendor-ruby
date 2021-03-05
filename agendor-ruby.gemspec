@@ -39,6 +39,7 @@ Gem::Specification.new do |s|
   s.summary = 'Agendor CRM ruby client'
 
   s.add_runtime_dependency 'faraday', '>= 0.17.0'
+  s.add_runtime_dependency 'json', '>= 1.8.0'
   s.add_development_dependency 'bundler', '~> 2.0'
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'simplecov'
