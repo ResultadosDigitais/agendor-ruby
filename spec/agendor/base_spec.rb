@@ -46,7 +46,7 @@ describe Agendor::Base, :vcr do
       let(:client) { Agendor::Organization.new("vikings@resultadosdigitais.com.br", "#qwe#123") }
 
       it "raises validation error" do
-      	expect { client.create({:nickname=>"Xunda Company 3 comes xunda makers", :description=>"Whatever xundasso company", :website => "www.whateverxundoers.com"}) }.to raise_error
+      	expect { client.create({:nickname=>"Xunda Company 3 comes xunda makers", :description=>"Whatever xundasso company", :website => "www.whateverxundoers.com"}) }.to raise_error(Agendor::UnauthorizedError)
       end
     end
   end
