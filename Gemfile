@@ -1,9 +1,11 @@
-source "http://rubygems.org"
+# frozen_string_literal: true
 
-ruby '2.6.6'
+source 'http://rubygems.org'
 
 gemspec
 
+gem 'rubocop', require: false
+
 group :test do
-  gem "codeclimate-test-reporter"
+  gem 'codeclimate-test-reporter'
 end

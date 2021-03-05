@@ -1,23 +1,23 @@
+# frozen_string_literal: true
+
 module Agendor
-
   class Person < Agendor::Entity
-
     def hash_keys
-      [
-        :personId,
-        :category,
-        :organization,
-        :description,
-        :phones,
-        :emails,
-        :social,
-        :address,
-        :userOwner,
-        :name,
-        :role,
-        :ranking,
-        :cpf,
-        :phone
+      %i[
+        personId
+        category
+        organization
+        description
+        phones
+        emails
+        social
+        address
+        userOwner
+        name
+        role
+        ranking
+        cpf
+        phone
       ]
     end
 
@@ -26,8 +26,7 @@ module Agendor
     end
 
     def klass_object_id(hash)
-      hash["personId"]
+      hash['personId']
     end
-
   end
 end
