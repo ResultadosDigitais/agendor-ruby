@@ -39,7 +39,7 @@ Gem::Specification.new do |s|
   s.summary = 'Agendor CRM ruby client'
 
   s.add_runtime_dependency 'httparty'
-  s.add_development_dependency 'bundler', '~> 1.0'
+  s.add_development_dependency 'bundler', '~> 2.0'
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'shoulda'
   s.add_development_dependency 'simplecov'

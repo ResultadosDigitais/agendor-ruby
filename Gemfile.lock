@@ -97,7 +97,7 @@ PLATFORMS
 
 DEPENDENCIES
   agendor-ruby!
-  bundler (~> 1.0)
+  bundler (~> 2.0)
   codeclimate-test-reporter
   rspec
   rubocop
@@ -107,4 +107,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.17.3
+   2.2.9
