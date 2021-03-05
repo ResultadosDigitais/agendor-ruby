@@ -1,10 +1,13 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe Agendor::Person, :vcr do
   let(:client) { Agendor::Person.new('f437bd57-a4e6-4dc1-a9b1-5278008e6e0e') }
 
   it 'creates a person' do
-    expect(client.create(name: 'Xunderson', role: 'Singer', description: 'Nice guy', emails_array: ['xunderson@example.org'])).to eq(6_874_083)
+    expect(client.create(name: 'Xunderson', role: 'Singer', description: 'Nice guy',
+                         emails_array: ['xunderson@example.org'])).to eq(6_874_083)
   end
 
   it 'gets a person' do
