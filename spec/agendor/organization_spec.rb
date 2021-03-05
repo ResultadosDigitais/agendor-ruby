@@ -24,7 +24,7 @@ describe Agendor::Organization, :vcr do
   end
 
   it "updates an inexistent organization" do
-    expect{client.update( 2536528394, { name: 'whatever' })}.to raise_error
+    expect{client.update( 2536528394, { name: 'whatever' })}.to raise_error(Agendor::Entity::ProcessingError)
   end
 
   it "check path" do
