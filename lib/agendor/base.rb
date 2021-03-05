@@ -28,6 +28,13 @@ module Agendor
     def api_path
       'https://api.agendor.com.br/v1'
     end
+
+    def client
+      @client ||= Faraday.new do |conn|
+        conn.headers = {'Content-Type' => 'application/json'}
+        conn.adapter Faraday.default_adapter
+      end
+    end
   end
 
   class UnauthorizedError < StandardError
