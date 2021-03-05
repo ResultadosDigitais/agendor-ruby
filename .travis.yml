@@ -10,3 +10,7 @@ script: "bundle exec rspec"
 
 notifications:
   email: false
+
+jobs:
+  allow_failures:
+    - rvm: 3.0.0
