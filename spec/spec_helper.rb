@@ -11,11 +11,11 @@ SimpleCov.start
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
 
 require 'vcr'
-require 'fakeweb'
+require 'webmock'
 
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/cassettes'
-  c.hook_into :fakeweb
+  c.hook_into :webmock
   c.configure_rspec_metadata!
   c.allow_http_connections_when_no_cassette = true
 end

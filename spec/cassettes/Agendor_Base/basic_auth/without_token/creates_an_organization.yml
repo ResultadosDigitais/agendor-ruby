@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://vikings%40resultadosdigitais.com.br:%23qwe%23123@api.agendor.com.br/v1/organizations
+    uri: https://api.agendor.com.br/v1/organizations
     body:
       encoding: UTF-8
       string: '{"nickname":"Xunda Company Co.5","description":"Whatever xunda company
