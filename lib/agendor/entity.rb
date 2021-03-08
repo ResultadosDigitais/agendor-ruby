@@ -4,31 +4,34 @@ module Agendor
   class Entity < Agendor::Base
     def create(params)
       body = process_hash(params)
-      response = HTTParty.post(resource_path, body: body.to_json, headers: headers)
-      code = response.code
+      response = client.post(resource_path, body.to_json, headers)
+      code = response.status
       raise UnauthorizedError, response if code == 401
       raise ProcessingError, response unless success_response?(code)
 
-      klass_object_id(response.parsed_response)
+      klass_object_id(JSON.parse(response.body))
     end
 
     def get(query)
-      response = HTTParty.get("#{resource_path}?q=#{query}", headers: headers)
-      code = response.code
+      response = client.get("#{resource_path}?q=#{query}") do |req|
+        req.headers = headers
+      end
+
+      code = response.status
       raise UnauthorizedError, response if code == 401
       raise ProcessingError, response unless success_response?(code)
 
-      response.parsed_response
+      JSON.parse(response.body)
     end
 
     def update(entity_id, params)
       body = process_hash(params)
-      response = HTTParty.put("#{resource_path}/#{entity_id}", body: body.to_json, headers: headers)
-      code = response.code
+      response = client.put("#{resource_path}/#{entity_id}", body.to_json, headers)
+      code = response.status
       raise UnauthorizedError, response if code == 401
       raise ProcessingError, response unless success_response?(code)
 
-      klass_object_id(response.parsed_response)
+      klass_object_id(JSON.parse(response.body))
     end
 
     def process_hash(params)

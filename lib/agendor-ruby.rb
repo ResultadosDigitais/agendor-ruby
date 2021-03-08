@@ -8,4 +8,4 @@ require 'agendor/deal'
 require 'agendor/token'
 require 'agendor/version'
 
-require 'httparty'
+require 'faraday'
