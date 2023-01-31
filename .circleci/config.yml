@@ -37,5 +37,5 @@ workflows:
       - build:
           matrix:
             parameters:
-              ruby-version: ["circleci/ruby:2.5.8", "circleci/ruby:2.6.6", "circleci/ruby:2.7.4", "circleci/ruby:3.2"]
+              ruby-version: ["cimg/ruby:2.5.8", "cimg/ruby:2.6.6", "cimg/ruby:2.7.4", "cimg/ruby:3.2.0"]
       - coverage
