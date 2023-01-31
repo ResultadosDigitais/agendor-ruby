@@ -2,6 +2,7 @@
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 
+require 'pry-byebug'
 require 'rspec'
 require 'vcr'
 require 'simplecov'

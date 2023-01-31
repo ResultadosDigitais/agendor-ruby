@@ -6,7 +6,7 @@ require 'agendor/version'
 Gem::Specification.new do |s|
   s.name = 'agendor-ruby'
   s.version = Agendor::VERSION
-  s.required_ruby_version = '>= 2.5.0'
+  s.required_ruby_version = '>= 3.2'
   s.required_rubygems_version = '>= 2.0.0'
   s.require_paths = ['lib']
   s.authors = ['Bruno Ghisi', 'Nathan Thiesen', 'Vicente Silveira Inácio']
@@ -41,6 +41,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'faraday', '>= 0.17.0'
   s.add_runtime_dependency 'json', '>= 1.8.0'
   s.add_development_dependency 'bundler', '~> 2.0'
+  s.add_development_dependency 'pry-byebug'
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'simplecov'
   s.add_development_dependency 'vcr'
