@@ -1,6 +1,4 @@
 # agendor-ruby
-[![Build
-Status](https://travis-ci.org/ResultadosDigitais/agendor-ruby.svg)](https://travis-ci.org/ResultadosDigitais/agendor-ruby)
 [![Code
 Climate](https://codeclimate.com/github/ResultadosDigitais/agendor-ruby/badges/gpa.svg)](https://codeclimate.com/github/ResultadosDigitais/agendor-ruby)
 

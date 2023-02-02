@@ -7,8 +7,7 @@ describe Agendor::Base, :vcr do
     let(:client) { Agendor::Deal.new('8a4bc1df-d464-473d-bf76-3d3d9492de5a') }
 
     it 'creates a deal' do
-      expect(client.create({ title: 'Whatever xunda Deal', org_id: 1_374_944,
-                             value: 50_000 })).to eq(1_613_012)
+      expect(client.create({title: 'Whatever xunda Deal', org_id: 1_374_944, value: 50_000})).to eq(1_613_012)
     end
   end
 
