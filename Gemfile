@@ -4,7 +4,7 @@ source 'http://rubygems.org'
 
 gemspec
 
-gem 'rubocop', require: false
+gem 'rubocop', '>= 1.12.0', require: false
 
 group :test do
   gem 'codeclimate-test-reporter'
